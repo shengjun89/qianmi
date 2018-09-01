@@ -666,6 +666,7 @@ guessName = new TextLayer
 	fontWeight: 500
 	textAlign: "left"
 	color: "rgba(63,69,72,1)"
+	z: 2
 
 guessPicArr = ["images/guess01.png","images/guess02.png","images/guess03.png","images/guess01.png","images/guess02.png","images/guess03.png","images/guess01.png","images/guess02.png","images/guess03.png",]	
 for i in [0..guessPicNum]
@@ -673,8 +674,9 @@ for i in [0..guessPicNum]
 		parent: guessName
 		width: Screen.width-64*n
 		height: 226*n
-		y: 72*n+226*n*i
+		y: 38*n+226*n*i
 		image: guessPicArr[i]
+		z: 1
 		
 # bottom.onClick (event, layer) ->
 # 	homeScroll.scrollToLayer(themItme,0,-0.23,)

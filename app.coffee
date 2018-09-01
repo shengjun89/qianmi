@@ -81,7 +81,7 @@ if Screen.height>=812
 	bottom = new Layer
 		width: Screen.width
 		height:166*n
-		y: Align.bottom(64*n)
+		y: Align.bottom()
 		image: "images/bottom.png"
 		shadowY: -4
 		shadowColor: "rgba(0,0,0,0.03057065217391304)"

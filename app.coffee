@@ -8,8 +8,16 @@ homeScroll = new ScrollComponent
 	scrollHorizontal: false
 homeScroll.contentInset =
 	bottom: 112*n
-
-
+homeScroll.content.draggable.bounceOptions =
+	friction: 60,
+	tension: 1200,
+	tolerance: 0.00001
+homeScroll.content.draggable.speedY = 1.5
+homeScroll.content.draggable.constraints =
+	x: 0
+	y: -260
+	width: 100
+	height: 100
 # 为模块标题添加箭头 手机演示有报错
 # Layer.prototype.addArrow = ()->
 # 	arrow = new Layer
@@ -283,7 +291,7 @@ banner = new PageComponent
 	shadowBlur: 12
 bannerpicArr = ["images/banner01.png","images/banner02.png","images/banner03.png"]
 banner.content.draggable.vertical = false
-
+banner.content.draggable.overdrag = false
 for number in [0...bannerpicArr.length]
 	bannerContent = new Layer
 		parent: banner.content

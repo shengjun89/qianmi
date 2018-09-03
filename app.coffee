@@ -41,6 +41,7 @@ homeScroll.content.draggable.constraints =
 
 # 搜索框/加载交互
 
+
 top = new Layer
 	width: Screen.width
 	height:180*n
@@ -48,10 +49,20 @@ top = new Layer
 	z: 3
 	backgroundColor: "#FFF"
 
+logo = new Layer
+	parent: top
+	x: Align.center
+	y: 64*n
+	width: 400*n
+	height: 88*n
+	image: "images/logo.png"
+	scale: 0.4
+	opacity: 0.3
+	
 localName = new TextLayer
 	parent: top
 	x: 32*n
-	y: 80*n
+	y: 86*n
 	text: "云南"
 	fontSize: 32*n
 	fontFamily: "PingFang SC"
@@ -61,7 +72,7 @@ localName = new TextLayer
 
 msgIcon = new Layer
 	x: Align.right(-32*n)
-	y: 76*n
+	y: 80*n
 	parent: top
 	width: 48*n
 	height: 48*n	
@@ -182,6 +193,7 @@ if Screen.height<812
 		input.y = Utils.modulate(y,[10*n,110*n],[172*n,56*n],true)
 # 		localName.y = Utils.modulate(y,[20*n,74*n],[80*n,106*n],true)
 # 		msgIcon.y = Utils.modulate(y,[20*n,74*n],[76*n,102*n],true)
+		logo.opacity = Utils.modulate(y,[0*n,20*n],[0.3,0],true)
 		input.height = Utils.modulate(y,[74*n,94*n],[76*n,60*n],true)
 		holdplace.y  = Utils.modulate(y,[109*n,110*n],[Align.center,16*n],true)
 		input.width = Utils.modulate(y,[0*n,30*n],[Screen.width-64*n,Screen.width-280*n],true)
@@ -222,8 +234,9 @@ else
 	scrolltoY = (y) ->
 		top.y = Utils.modulate(y,[94*n,110*n],[0,0],true)
 		input.y = Utils.modulate(y,[20*n,60*n],[172*n,96*n],true)
-		localName.y = Utils.modulate(y,[20*n,74*n],[80*n,106*n],true)
-		msgIcon.y = Utils.modulate(y,[20*n,74*n],[76*n,102*n],true)
+		localName.y = Utils.modulate(y,[20*n,74*n],[86*n,106*n],true)
+		logo.opacity = Utils.modulate(y,[0*n,20*n],[0.3,0],true)
+		msgIcon.y = Utils.modulate(y,[20*n,74*n],[80*n,102*n],true)
 		input.height = Utils.modulate(y,[74*n,94*n],[76*n,60*n],true)
 		holdplace.y  = Utils.modulate(y,[109*n,110*n],[Align.center,16*n],true)
 		input.width = Utils.modulate(y,[0*n,20*n],[Screen.width-64*n,Screen.width-280*n],true)
@@ -473,7 +486,7 @@ hotDest = new TextLayer
 	fontFamily: "PingFang SC"
 	fontWeight: 500
 	textAlign: "left"
-	color: "rgba(63,69,72,1)"
+	color: "#000"
 # hotDest.addArrow()
 hotDestarrow = new Layer
 	parent: hotDest
@@ -516,7 +529,7 @@ for index in [0...pageCount]
 		width: pageScroller.width
 		height: 294*n
 		x: (222*n + gutter) * index+22*n
-		backgroundColor: "#00AAFF"
+		backgroundColor: "#f5f5f5"
 		originX: 0.9
 # 		hueRotate: index * 20
 		parent: pageScroller.content
@@ -632,7 +645,7 @@ innerPicArrow = new Layer
 	background:null
 	image: "images/arrow.svg"
 
-innerCount = 6
+innerCount = 3
 innergutter = 10*n
 
 # Create PageComponent
@@ -641,15 +654,15 @@ innerScroller = new ScrollComponent
 	x: 0
 	y: 80*n
 	point: Align.center
-	width: 172*n
-	height: 234*n
+	width: 222*n
+	height: 294*n
 	scrollVertical: false
 	clip: false
 	z: 2
 	
 innerScroller.contentInset =
 	top: 0
-	right: -518*n
+# 	right: -518*n
 	bottom: 0
 	left: 0
 
@@ -658,18 +671,26 @@ innerScroller.content.draggable.bounceOptions =
 	tension: 400,
 	tolerance: 0.00001
 
-innerPics = ["images/inner01.png","images/inner02.png","images/inner03.png","images/inner01.png","images/inner02.png","images/inner03.png"]
+innerPics = ["images/inner01.png","images/inner02.png","images/inner03.png"]
+innerScroller.content.draggable = false
 
-
-
+changeBtn = new Layer
+	parent: innerPic
+	y: 8*n
+	x: 570*n
+	width: 114*n
+	height: 28*n
+	image: "images/changeinner.png"
+	
+# print RandoNumber
 innerPages = []
 # Loop to create pages
 for index in [0...innerCount]
 	innerpage = new Layer
 		width: innerScroller.width
-		height: 234*n
-		x: (172*n + innergutter) * index
-		backgroundColor: "#00AAFF"
+		height: 294*n
+		x: (222*n + innergutter) * index
+		backgroundColor: "#f5f5f5"
 		originX: 0.9
 # 		hueRotate: index * 20
 		parent: innerScroller.content
@@ -681,11 +702,190 @@ for index in [0...innerCount]
 		shadowY: 8
 		shadowBlur: 8
 		shadowSpread: 0
+	innerPages.push(innerpage)	
+
+
+
+randomSort = (a, b) ->
+	return Math.random() > 0.5 ? -1 : 1
+arr =  ["images/inner01.png","images/inner02.png","images/inner03.png"]
+
+changeBtn.onTap (event, layer) ->
+# 	print arr.sort(randomSort)
+	for index in [0...innerCount]
+		innerPages[index].image = arr.sort(randomSort)[index]
+# 		innerpage.image = arr.sort(randomSort)[a]
+		
+# 主题游
+# themItme = new CarouselComponent
+# 	parent: homeScroll.content
+# 	x: 0
+# 	y: innerPic.y+420*n
+# 	backgroundColor:"#FFF"
+# 	title: "主题游"
+# 	titleFontSize: 36*n
+# 	titleFontWeight: 500
+# 	titleColor: "rgba(63,69,72,1)"
+# 	itemCount: 6
+# 	itemMargin: 10*n
+# 	itemWidth: 268*n
+# 	itemHeight: 242*n
+# 	itemBorderRadius: 0
+# 	imagePrefix: "images/theme"
+# 	margins: [72*n, 32*n, 32*n, 32*n]
+# 	titleMargin: 32*n
+# 	
+# themIcon = new Layer
+# 	parent: themItme
+# 	x: 136*n
+# 	y: Align.top
+# 	width: 36*n
+# 	height: 36*n
+# 	background:null
+# 	image: "images/arrow.svg"		
+# 
+# themItme.row.width = 750*n
+# themItme.row.height = 242*n
+# 
+# 
+# innermore = new Layer
+# 	parent: themItme
+# 	width: innerpage.height*2
+# 	height: innerpage.height
+# 	y: 80*n
+# 	x: Screen.width+40*n
+# 	scaleX: 0.2
+# 	originX: 0.2
+# 	originY: 0.5
+# 	borderRadius: 117*n 
+# 	backgroundColor: "#00BCD4"
+# 	opacity: 0
+# 
+# innermoretxt = new TextLayer
+# 	parent: themItme
+# 	x: Screen.width-60*n
+# 	width: 32*n
+# 	y: 130*n
+# 	text: "查看更多"
+# 	fontSize: 26*n
+# 	fontFamily: "PingFang SC"
+# 	fontWeight: 400
+# 	letterSpacing: 0.0
+# 	textAlign: "center"
+# 	color: "rgba(255,255,255,1)"
+# 	shadowColor: "rgba(0,166,187,1)"
+# 	shadowX: 0
+# 	shadowY: 4
+# 	shadowBlur: 8
+# 	opacity: 0
+# 	
+# innerScroller.on Events.Move, ->
+# 	scrolltoX(innerScroller.scrollX)	
+# scrolltoX = (x) ->
+# # 	print x
+# 	innermore.scaleX = Utils.modulate(x,[400*n,450*n],[0.2,1],true)
+# 	innermore.opacity = Utils.modulate(x,[400*n,450*n],[0,1],true)
+# 	innermore.originX = Utils.modulate(x,[400*n,450*n],[0.2,0],true)
+# 	innermoretxt.x = Utils.modulate(x,[400*n,450*n],[Screen.width-60*n,Screen.width-72*n],true)
+# 	innermoretxt.opacity = Utils.modulate(x,[400*n,450*n],[0,1],true)
+# 	innermore.scale = Utils.modulate(x,[450*n,550*n],[1,1.6],true)
+# 	innermore.scaleY = Utils.modulate(x,[450*n,550*n],[1,0.6],true)
+# 	innermore.x = Utils.modulate(x,[450*n,550*n],[Screen.width-110*n,Screen.width-200*n],true)
+# # 	top.y = Utils.modulate(y,[94*n,110*n],[0,-16*n],true)
+# 	if x>500*n
+# 		innermoretxt.text = "释放跳转"
+# 	else	
+# 		innermoretxt.text = "查看更多"
+# 
+# for i in [0...themItme.row.content.children.length]
+# # # 	print 1
+# 	themItme.row.content.children[i].height = 242*n
+# 
+# # 十字交互体验优化
+# themItme.row.content.on Events.DragMove, ->
+# 	if Math.abs(themItme.row.content.draggable.offset.x)>40*n
+# # 	if themItme.row.content.draggable.offset < 56*n
+# 		homeScroll.content.draggable.enabled = false
+# 	else
+# 		homeScroll.content.draggable.enabled = true	
+# # 
+# themItme.row.content.on Events.DragEnd, ->
+# 	homeScroll.content.draggable.enabled = true
+# 酒店旗舰店
+themItme = new TextLayer
+	parent: homeScroll.content
+	x: Align.left(32*n)
+	y: innerPic.y+480*n
+	text: "主题游"
+	fontSize: 36*n
+	fontFamily: "PingFang SC"
+	fontWeight: 500
+	textAlign: "left"
+	color: "rgba(63,69,72,1)"
+# hotDest.addArrow()
+themItmeArrow = new Layer
+	parent: themItme
+	x: themItme.width
+	y: Align.center
+	width: 36*n
+	height: 36*n
+	background:null
+	image: "images/arrow.svg"
+
+themeCount = 4
+themegutter = 10*n
+
+# Create PageComponent
+themeScroller = new ScrollComponent
+	parent: themItme
+	x: 0
+	y: 80*n
+	point: Align.center
+	width: 268*n
+	height: 242*n
+	scrollVertical: false
+	clip: false
+	z: 2
+	
+themeScroller.contentInset =
+	top: 0
+	right: -418*n
+	bottom: 0
+	left: 0
+
+themeScroller.content.draggable.bounceOptions =
+	friction: 36,
+	tension: 800,
+	tolerance: 0.00001
+
+themePics = ["images/images/theme0.png","images/images/theme1.png","images/images/theme2.png","images/images/theme3.png"]
+
+
+
+themePages = []
+# Loop to create pages
+for index in [0...themeCount]
+	innerpage = new Layer
+		width: themeScroller.width
+		height: 242*n
+		x: (268*n + themegutter) * index
+		backgroundColor: "#f5f5f5"
+		originX: 0.9
+# 		hueRotate: index * 20
+		parent: themeScroller.content
+		image: themePics[index]
+# 		borderColor: "rgba(231,233,241,1)"
+# 		borderWidth: 0.5
+		shadowColor: "rgba(0,0,0,0.02)"
+		shadowX: 0
+		shadowY: 8
+		shadowBlur: 8
+		shadowSpread: 0
 
 innermore = new Layer
-	parent: innerPic
+	parent: themItme
 	width: innerpage.height*2
-	height: innerpage.height
+	height: innerpage.height-60*n
 	y: 80*n
 	x: Screen.width+40*n
 	scaleX: 0.2
@@ -696,10 +896,10 @@ innermore = new Layer
 	opacity: 0
 
 innermoretxt = new TextLayer
-	parent: innerPic
+	parent: themItme
 	x: Screen.width-60*n
 	width: 32*n
-	y: 130*n
+	y: 110*n
 	text: "查看更多"
 	fontSize: 26*n
 	fontFamily: "PingFang SC"
@@ -714,79 +914,34 @@ innermoretxt = new TextLayer
 	opacity: 0
 	
 
-innerScroller.on Events.Move, ->
-	scrolltoX(innerScroller.scrollX)
+themeScroller.on Events.Move, ->
+	scrolltoX(themeScroller.scrollX)
 
 
 scrolltoX = (x) ->
 # 	print x
-	innermore.scaleX = Utils.modulate(x,[400*n,450*n],[0.2,1],true)
-	innermore.opacity = Utils.modulate(x,[400*n,450*n],[0,1],true)
-	innermore.originX = Utils.modulate(x,[400*n,450*n],[0.2,0],true)
-	innermoretxt.x = Utils.modulate(x,[400*n,450*n],[Screen.width-60*n,Screen.width-72*n],true)
-	innermoretxt.opacity = Utils.modulate(x,[400*n,450*n],[0,1],true)
+	innermore.scaleX = Utils.modulate(x,[416*n,472*n],[0.2,1],true)
+	innermore.opacity = Utils.modulate(x,[416*n,472*n],[0,1],true)
+	innermore.originX = Utils.modulate(x,[416*n,472*n],[0.2,0],true)
+	innermoretxt.x = Utils.modulate(x,[416*n,472*n],[Screen.width-60*n,Screen.width-80*n],true)
+	innermoretxt.opacity = Utils.modulate(x,[450*n,480*n],[0,1],true)
 	innermore.scale = Utils.modulate(x,[450*n,550*n],[1,1.6],true)
-	innermore.scaleY = Utils.modulate(x,[450*n,550*n],[1,0.6],true)
-	innermore.x = Utils.modulate(x,[450*n,550*n],[Screen.width-110*n,Screen.width-200*n],true)
+	innermore.scaleY = Utils.modulate(x,[450*n,550*n],[1,0.7],true)
+	innermore.x = Utils.modulate(x,[420*n,680*n],[Screen.width-110*n,Screen.width-200*n],true)
 # 	top.y = Utils.modulate(y,[94*n,110*n],[0,-16*n],true)
 	if x>500*n
 		innermoretxt.text = "释放跳转"
 	else	
 		innermoretxt.text = "查看更多"
 # 十字交互体验优化
-innerScroller.content.on Events.DragMove, ->
-	if Math.abs(innerScroller.content.draggable.offset.x)>40*n
+themeScroller.content.on Events.DragMove, ->
+	if Math.abs(themeScroller.content.draggable.offset.x)>40*n
 # 	if localHotItem.row.content.draggable.offset < 56*n
 		homeScroll.content.draggable.enabled = false
 	else
 		homeScroll.content.draggable.enabled = true	
 
-innerScroller.content.on Events.DragEnd, ->
-	homeScroll.content.draggable.enabled = true
-		
-# 主题游
-themItme = new CarouselComponent
-	parent: homeScroll.content
-	x: 0
-	y: innerPic.y+420*n
-	backgroundColor:"#FFF"
-	title: "主题游"
-	titleFontSize: 36*n
-	titleFontWeight: 500
-	titleColor: "rgba(63,69,72,1)"
-	itemCount: 6
-	itemMargin: 10*n
-	itemWidth: 268*n
-	itemHeight: 242*n
-	itemBorderRadius: 0
-	imagePrefix: "images/theme"
-	margins: [72*n, 32*n, 32*n, 32*n]
-	titleMargin: 32*n
-	
-themIcon = new Layer
-	parent: themItme
-	x: 136*n
-	y: Align.top
-	width: 36*n
-	height: 36*n
-	background:null
-	image: "images/arrow.svg"		
-
-themItme.row.width = 750*n
-themItme.row.height = 242*n
-for i in [0...themItme.row.content.children.length]
-# # 	print 1
-	themItme.row.content.children[i].height = 242*n
-
-# 十字交互体验优化
-themItme.row.content.on Events.DragMove, ->
-	if Math.abs(themItme.row.content.draggable.offset.x)>40*n
-# 	if themItme.row.content.draggable.offset < 56*n
-		homeScroll.content.draggable.enabled = false
-	else
-		homeScroll.content.draggable.enabled = true	
-# 
-themItme.row.content.on Events.DragEnd, ->
+themeScroller.content.on Events.DragEnd, ->
 	homeScroll.content.draggable.enabled = true
 
 # 猜你喜欢

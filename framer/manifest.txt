@@ -2,6 +2,7 @@ app.coffee
 index.html
 images/sprite.gif
 images/arrow.svg
+images/changeinner.png
 images/banner.png
 images/paybar03.png
 images/images/theme4.png
@@ -20,8 +21,13 @@ images/paybar01.png
 images/pulldown.svg
 images/holdplace.png
 images/paybar04.png
+images/close.svg
+images/inner01.png
 images/innerPic.png
+images/inner03.png
+images/inner02.png
 images/startsprite.png
+images/logo.png
 images/guess01.png
 images/guess02.png
 images/guess03.png

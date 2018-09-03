@@ -628,7 +628,7 @@ priceInqPic = new Layer
 innerPic = new TextLayer
 	parent: homeScroll.content
 	x: Align.left(32*n)
-	y: priceInq.y+480*n
+	y: priceInq.y+460*n
 	text: "酒店旗舰店"
 	fontSize: 36*n
 	fontFamily: "PingFang SC"
@@ -815,7 +815,7 @@ changeBtn.onTap (event, layer) ->
 themItme = new TextLayer
 	parent: homeScroll.content
 	x: Align.left(32*n)
-	y: innerPic.y+480*n
+	y: innerPic.y+440*n
 	text: "主题游"
 	fontSize: 36*n
 	fontFamily: "PingFang SC"
@@ -952,7 +952,7 @@ guessPicNum = 8
 guessName = new TextLayer
 	parent: homeScroll.content
 	x: Align.left(32*n)
-	y: themItme.y+360*n
+	y: themItme.y+400*n
 	height: (guessPicNum+2)*226*n
 	text: "猜你喜欢"
 	fontSize: 36*n

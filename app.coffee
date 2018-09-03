@@ -696,7 +696,7 @@ for index in [0...innerCount]
 		parent: innerScroller.content
 		image: innerPics[index]
 # 		borderColor: "rgba(231,233,241,1)"
-		borderWidth: 0.5
+# 		borderWidth: 0.12
 		shadowColor: "rgba(0,0,0,0.02)"
 		shadowX: 0
 		shadowY: 8

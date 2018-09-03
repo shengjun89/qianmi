@@ -129,9 +129,53 @@ holdplace = new Layer
 	height: 28*n
 	backgroundColor: null
 	image: "images/holdplace.png"
+
+searchsheet = new Layer
+# 	y: 40*n
+	y: Screen.height
+	width: Screen.width
+	height: 1334*n
+	z: 5
+	opacity: 0
+	image: "images/search.png"
+		
+overlay = new Layer
+	width: Screen.width
+	height: Screen.height
+	backgroundColor: "#FFF"
+	opacity: 0	
+	z: 4
 	
-	
+searchsheet.states = 
+	on:
+		y:40*n
+		opacity: 1
+		options:
+			curve: "spring(400,40,0)"
+			time: 0.25
+			
+overlay.states =
+	on:
+		opacity: 1
+		options:
+			curve: "spring(400,40,0)"
+			time: 0.25
+			
+localName.onTap (event, layer) ->
+	searchsheet.animate "on"
+	overlay.animate "on"			
+
+localNameArrow.onTap (event, layer) ->
+	searchsheet.animate "on"
+	overlay.animate "on"
+
+searchsheet.onTap (event, layer) ->
+	searchsheet.animate "default",time:0.1
+	overlay.animate "default",time:0.1
 # 下拉加载
+
+
+	
 frameStep = 38
 frameWidth = 260
 frameRate = 2.2

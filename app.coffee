@@ -990,9 +990,9 @@ scrolltoX = (x) ->
 	innermore.originX = Utils.modulate(x,[416*n,472*n],[0.2,0],true)
 	innermoretxt.x = Utils.modulate(x,[416*n,472*n],[Screen.width-60*n,Screen.width-80*n],true)
 	innermoretxt.opacity = Utils.modulate(x,[416*n,480*n],[0,1],true)
-	innermore.scale = Utils.modulate(x,[450*n,550*n],[1,1.6],true)
-	innermore.scaleY = Utils.modulate(x,[450*n,550*n],[1,0.7],true)
-	innermore.x = Utils.modulate(x,[420*n,680*n],[Screen.width-110*n,Screen.width-200*n],true)
+	innermore.scale = Utils.modulate(x,[450*n,550*n],[1,1.4],true)
+	innermore.scaleY = Utils.modulate(x,[450*n,550*n],[1,0.6],true)
+	innermore.x = Utils.modulate(x,[420*n,680*n],[Screen.width-110*n,Screen.width-160*n],true)
 # 	top.y = Utils.modulate(y,[94*n,110*n],[0,-16*n],true)
 	if x>500*n
 		innermoretxt.text = "释放跳转"

@@ -2,27 +2,23 @@
   "orientation" : 0,
   "updateDelay" : 0.29999999999999999,
   "designModeSelected" : 0,
-  "cachedDeviceHeight" : 812,
+  "cachedDeviceHeight" : 731.4285888671875,
   "contentScale" : 1,
-  "cachedDeviceWidth" : 375,
+  "cachedDeviceWidth" : 411.42855834960938,
   "fullScreen" : false,
-  "deviceType" : "apple-iphone-x-space-gray",
+  "deviceType" : "google-nexus-6p",
   "sharedPrototype" : 0,
   "propertyPanelToggleStates" : {
 
   },
-  "projectId" : "ACDC5475-491B-4C39-B5B6-71FA72BED109",
+  "projectId" : "4789ED1E-D92F-4494-B871-896366BED6C7",
   "deviceOrientation" : 0,
   "selectedHand" : "",
   "showBezel" : 0,
   "foldedCodeRanges" : [
-    "{876, 5575}",
-    "{9813, 1743}",
-    "{11557, 5102}",
-    "{16660, 358}",
-    "{17019, 1865}",
-    "{18887, 5692}",
-    "{24580, 634}"
+    "{247, 639}",
+    "{887, 750}",
+    "{1638, 937}"
   ],
   "deviceScale" : "fit"
 }

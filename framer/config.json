@@ -2,23 +2,24 @@
   "orientation" : 0,
   "updateDelay" : 0.29999999999999999,
   "designModeSelected" : 0,
-  "cachedDeviceHeight" : 731.4285888671875,
+  "cachedDeviceHeight" : 667,
   "contentScale" : 1,
-  "cachedDeviceWidth" : 411.42855834960938,
+  "cachedDeviceWidth" : 375,
   "fullScreen" : false,
-  "deviceType" : "google-nexus-6p",
-  "sharedPrototype" : 0,
+  "deviceType" : "apple-iphone-8-space-gray",
+  "sharedPrototype" : true,
   "propertyPanelToggleStates" : {
 
   },
-  "projectId" : "4789ED1E-D92F-4494-B871-896366BED6C7",
+  "projectId" : "31024FC7-8EA1-411C-B634-597ECD68F3F5",
   "deviceOrientation" : 0,
   "selectedHand" : "",
   "showBezel" : 0,
   "foldedCodeRanges" : [
-    "{247, 639}",
-    "{887, 750}",
-    "{1638, 937}"
+    "{145, 639}",
+    "{785, 1233}",
+    "{2642, 1527}",
+    "{14539, 2045}"
   ],
   "deviceScale" : "fit"
 }

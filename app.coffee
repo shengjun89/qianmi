@@ -32,7 +32,7 @@ scroll.scrollHorizontal = false
 
 # print info.backgroundColor.a
 avatar.originX = 0
-avatar.originY = 1.2	
+avatar.originY = 1	
 # 初始化组件
 # $sheet = actionSheet.copy()
 $sheet.parent = main
@@ -94,6 +94,7 @@ scrolltoY = (y) ->
 	info_bg.y= Utils.modulate(y,[171,192],[18,0],true)
 	# 社区头像
 	avatar.scale = Utils.modulate(y,[160,180],[1,0.5],true)
+	avatar.y = Utils.modulate(y,[171,180],[-10,-24],true)
 	# 社区标题
 	info_title.opacity = Utils.modulate(y,[230,236],[0,1],true)
 	info.height = Utils.modulate(y,[171,190],[68,48],true)
@@ -160,7 +161,7 @@ decorate.onClick (event, layer) ->
 		overlay.stateSwitch("stateB","stateA")
 		Edited(info)
 		Edited($tab)
-# 		avatar.y = -10	
+		avatar.y = -10	
 		$tab.children[0].y = 50
 		$tab.children[1].y = 44
 		@switch = false

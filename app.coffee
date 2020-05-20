@@ -86,7 +86,7 @@ info.y = 180
 scroll.on Events.Move, ->
 	scrolltoY(scroll.scrollY)
 scrolltoY = (y) ->	
-	print y
+# 	print y
 	# 简介吸顶交互
 	if y > 171
 		info.y = y
@@ -159,14 +159,15 @@ decorate.onClick (event, layer) ->
 		$sheet.stateSwitch("stateB","stateA")
 		overlay.stateSwitch("stateB","stateA")
 		Edited(info)
-		Edited($tab)	
+		Edited($tab)
+		avatar.y = -10	
 		$tab.children[0].y = 50
 		$tab.children[1].y = 44
 		@switch = false
 		info.children[2].y = 10
 		fresh()
 	
-	else	
+	else
 		Saved(info)
 		Saved($tab)	
 		$tab.children[0].y = 10
@@ -186,7 +187,7 @@ $fab.onClick (event, layer) ->
 	Saved(info)
 	Saved($tab)	
 	decorate.switch = true
-	$tab.children[0].y = 10
+	$tab.children[0].y = 14
 	$tab.children[1].y = 10
 	@visible = false
 	decorate.children[0].text = "装修"

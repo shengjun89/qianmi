@@ -1,6 +1,5 @@
 app.coffee
 index.html
-images/design/sXvcwNBFrXEWhR68oDZQb9Ek9lKZiGGAD9JtFzHfcFxskXvEORRVVjty7S3Maw08yj9dmgjbLQeXe0GyILBQ
 framer/manifest.txt
 framer/images/cursor.png
 framer/images/cursor-active@2x.png

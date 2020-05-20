@@ -36,7 +36,7 @@ avatar.originY = 1
 # 初始化组件
 # $sheet = actionSheet.copy()
 $sheet.parent = main
-$sheet.y= Align.bottom(280)
+$sheet.y= Align.bottom(210)
 $sheet.x= Align.center()
 
 
@@ -240,7 +240,7 @@ $sheet.states.stateA =
 		curve: iOSActionSheet
 		time: 0.1
 $sheet.states.stateB =
-	y: Align.bottom(280)
+	y: Align.bottom(210)
 	options: 
 		curve: iOSActionSheet
 		time: 0.1			

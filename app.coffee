@@ -160,7 +160,7 @@ decorate.onClick (event, layer) ->
 		overlay.stateSwitch("stateB","stateA")
 		Edited(info)
 		Edited($tab)
-		avatar.y = -10	
+# 		avatar.y = -10	
 		$tab.children[0].y = 50
 		$tab.children[1].y = 44
 		@switch = false

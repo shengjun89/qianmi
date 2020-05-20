@@ -2630,14 +2630,14 @@
                 "borderStyle" : "solid",
                 "borderTop" : 1,
                 "borderWidth" : 1,
-                "bottom" : 8,
+                "bottom" : 5,
                 "boxShadows" : [
 
                 ],
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.10533333333333333,
-                "centerAnchorY" : 0.66666666666666663,
+                "centerAnchorY" : 0.71014492753623193,
                 "children" : [
                   {
                     "__class" : "FrameNode",
@@ -3213,14 +3213,14 @@
                 "borderStyle" : "solid",
                 "borderTop" : 1,
                 "borderWidth" : 1,
-                "bottom" : 8,
+                "bottom" : 5,
                 "boxShadows" : [
 
                 ],
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.89600000000000002,
-                "centerAnchorY" : 0.66666666666666663,
+                "centerAnchorY" : 0.71014492753623193,
                 "children" : [
                   {
                     "__class" : "PathNode",

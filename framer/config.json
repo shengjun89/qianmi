@@ -2,29 +2,22 @@
   "orientation" : 0,
   "updateDelay" : 0.29999999999999999,
   "designModeSelected" : 0,
-  "cachedDeviceHeight" : 667,
+  "cachedDeviceHeight" : 812,
   "contentScale" : 1,
-  "cachedDeviceWidth" : 375,
   "fullScreen" : false,
-  "deviceType" : "apple-iphone-8-space-gray",
-  "sharedPrototype" : true,
+  "cachedDeviceWidth" : 375,
+  "deviceType" : "apple-iphone-x-space-gray",
+  "sharedPrototype" : 0,
   "propertyPanelToggleStates" : {
 
   },
-  "projectId" : "31024FC7-8EA1-411C-B634-597ECD68F3F5",
+  "projectId" : "4352AF4C-6727-485D-ABAB-74AE5FA272E1",
   "deviceOrientation" : 0,
   "selectedHand" : "",
   "showBezel" : 0,
   "foldedCodeRanges" : [
-<<<<<<< HEAD
     "{70, 665}",
     "{4708, 623}"
-=======
-    "{145, 639}",
-    "{785, 1233}",
-    "{2642, 1527}",
-    "{14539, 2045}"
->>>>>>> parent of bfd6d52... Change to qianmi homepage
   ],
   "deviceScale" : "fit"
 }

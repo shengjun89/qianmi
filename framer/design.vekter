@@ -282,7 +282,6 @@
                             "brightnessEnabled" : 0,
                             "centerAnchorX" : 0.10084033613445378,
                             "centerAnchorY" : 0.54166666666666663,
-                            "clip" : false,
                             "colorable" : true,
                             "constraintsLocked" : false,
                             "contrast" : 100,
@@ -349,7 +348,6 @@
                             "brightnessEnabled" : 0,
                             "centerAnchorX" : 0.33613445378151263,
                             "centerAnchorY" : 0.54166666666666663,
-                            "clip" : false,
                             "colorable" : false,
                             "constraintsLocked" : false,
                             "contrast" : 100,
@@ -357,6 +355,7 @@
                             "exportOptions" : [
 
                             ],
+                            "fillColor" : "rgba(0,0,0,1)",
                             "fillGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
@@ -838,14 +837,14 @@
                     "blurEnabled" : 0,
                     "blurType" : "layer",
                     "borderBottom" : 1,
-                    "borderColor" : "#222",
-                    "borderEnabled" : 0,
+                    "borderColor" : "hsl(0, 0%, 100%)",
+                    "borderEnabled" : -1,
                     "borderLeft" : 1,
                     "borderPerSide" : false,
                     "borderRight" : 1,
                     "borderStyle" : "solid",
                     "borderTop" : 1,
-                    "borderWidth" : 1,
+                    "borderWidth" : 2,
                     "bottom" : 14,
                     "boxShadows" : [
 
@@ -910,8 +909,8 @@
                     "exportOptions" : [
 
                     ],
-                    "fillColor" : "rgba(255,255,255,1)",
-                    "fillEnabled" : false,
+                    "fillColor" : "#CCC",
+                    "fillEnabled" : true,
                     "fillGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
@@ -919,11 +918,11 @@
                       "end" : "rgba(0,0,0,0)",
                       "start" : "black"
                     },
-                    "fillImage" : null,
-                    "fillImagePixelHeight" : null,
-                    "fillImagePixelWidth" : null,
+                    "fillImage" : "sXvcwNBFrXEWhR68oDZQb9Ek9lKZiGGAD9JtFzHfcFxskXvEORRVVjty7S3Maw08yj9dmgjbLQeXe0GyILBQ",
+                    "fillImagePixelHeight" : 200,
+                    "fillImagePixelWidth" : 200,
                     "fillImageResize" : "fill",
-                    "fillType" : "color",
+                    "fillType" : "image",
                     "grayscale" : 0,
                     "grayScaleEnabled" : 0,
                     "height" : 64,
@@ -940,13 +939,13 @@
                     "name" : "avatar",
                     "opacity" : 1,
                     "parentid" : "w0CuRnwq8",
-                    "radius" : 0,
-                    "radiusBottomLeft" : 0,
-                    "radiusBottomRight" : 0,
+                    "radius" : 32,
+                    "radiusBottomLeft" : 32,
+                    "radiusBottomRight" : 32,
                     "radiusIsRelative" : false,
                     "radiusPerCorner" : false,
-                    "radiusTopLeft" : 0,
-                    "radiusTopRight" : 0,
+                    "radiusTopLeft" : 32,
+                    "radiusTopRight" : 32,
                     "right" : null,
                     "rotation" : 0,
                     "saturate" : 100,
@@ -3047,7 +3046,6 @@
                         "brightnessEnabled" : 0,
                         "centerAnchorX" : 0.48214285714285715,
                         "centerAnchorY" : 0.5178571428571429,
-                        "clip" : false,
                         "colorable" : true,
                         "constraintsLocked" : false,
                         "contrast" : 100,
@@ -3666,9 +3664,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 97,
-                "widthFactor" : null,
-                "x" : 164,
-                "y" : 53
+                "widthFactor" : null
               }
             ],
             "clip" : false,
@@ -8198,7 +8194,6 @@
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.34999999999999998,
-                "clip" : false,
                 "colorable" : false,
                 "constraintsLocked" : false,
                 "contrast" : 100,
@@ -8206,6 +8201,7 @@
                 "exportOptions" : [
 
                 ],
+                "fillColor" : "rgba(0,0,0,1)",
                 "fillGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
@@ -10261,9 +10257,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 27,
-                "widthFactor" : null,
-                "x" : 26,
-                "y" : 17
+                "widthFactor" : null
               }
             ],
             "clip" : false,

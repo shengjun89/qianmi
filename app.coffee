@@ -32,7 +32,7 @@ scroll.scrollHorizontal = false
 
 # print info.backgroundColor.a
 avatar.originX = 0
-avatar.originY = 1	
+avatar.originY = 1.2
 # 初始化组件
 # $sheet = actionSheet.copy()
 $sheet.parent = main
@@ -42,7 +42,7 @@ $sheet.x= Align.center()
 
 module.parent = scrollcontent
 module.x = Align.center()
-module.y = 260
+module.y = 244
 
 $tab = tab.copy()
 $tab.parent = scrollcontent
@@ -55,13 +55,13 @@ backtop.opacity = 0
 icon_group.x = Align.right(-16)
 
 
-module.placeBehind(info)
+module.placeBehind(banner)
 # $backtop = backtop.copy()
 
 for i in [0...7]
 	$list = list.copy()
 	$list.parent = scrollcontent
-	$list.placeBehind(info)
+	$list.placeBehind(banner)
 	$list.y = ($list.height+12)*i+630
 	$list.x = Align.center()
 
@@ -82,30 +82,37 @@ fab.states =
 			curve:quick
 			time: 0.5	
 	
-info.y = 180
+
 scroll.on Events.Move, ->
 	scrolltoY(scroll.scrollY)
 scrolltoY = (y) ->	
 # 	print y
+# 	print info.height
 	# 简介吸顶交互
 	if y > 171
-		info.y = y
-		
-	info_bg.y= Utils.modulate(y,[171,192],[18,0],true)
+		info.parent = topbar
+		info.y = topbar.height-1
+		info.height = 48
+	else
+		info.parent = banner
+		info.y = 185	
+# 	info_bg.y= Utils.modulate(y,[171,192],[18,0],true)
 	# 社区头像
-	avatar.scale = Utils.modulate(y,[160,180],[1,0.5],true)
-	avatar.y = Utils.modulate(y,[171,180],[-10,-24],true)
+	avatar.scale = Utils.modulate(y,[158,180],[1,0.5],true)
+# 	avatar.y = Utils.modulate(y,[171,180],[-10,-24],true)
 	# 社区标题
 	info_title.opacity = Utils.modulate(y,[230,236],[0,1],true)
-	info.height = Utils.modulate(y,[171,190],[68,48],true)
+	info.opacity = Utils.modulate(y,[516,564],[1,0],true)
 	backtop.opacity = Utils.modulate(y,[560,570],[0,1],true)
 	navTitle.opacity = Utils.modulate(y,[560,570],[0,1],true)
 	icon_group.x = Utils.modulate(y,[560,570],[240,208],true)
 	
 	if y > 560
-		$tab.y = y
+		$tab.y = y 		
 
-	
+# 	else
+# 		info.y = 171	
+
 	# float btn 推动交互
 # 	if y> 0 && scroll.direction == "down"
 # 		fab.animate "stateA"
@@ -136,7 +143,7 @@ scroll.contentInset =
 	
 fresh=()->
 	scroll.scrollToPoint(y:20)
-	info.y = 180
+
 # 回顶部
 backtop.onClick (event, layer) -> 
 	fresh()
@@ -152,36 +159,36 @@ $fab.visible = false
 $fab.placeBehind($sheet)
 
 # 装修&保存
-decorate.switch = true	
-decorate.onClick (event, layer) ->
-	if @switch == true
-		$fab.visible = true
-		@children[0].text = "保存"
-		$sheet.stateSwitch("stateB","stateA")
-		overlay.stateSwitch("stateB","stateA")
-		Edited(info)
-		Edited($tab)
-		avatar.y = -10	
-		$tab.children[0].y = 50
-		$tab.children[1].y = 44
-		@switch = false
-		info.children[2].y = 10
-		fresh()
-	
-	else
-		Saved(info)
-		Saved($tab)	
-		$tab.children[0].y = 10
-		$tab.children[1].y = 0
-		$fab.visible = false
-		@children[0].text = "装修"
-		@switch = true
-		$sheet.stateSwitch("stateB","stateA")
-		overlay.stateSwitch("stateB","stateA")
-		avatar.visible = true
-		backtop.visible = true	
-		backtop.y = Align.center(4)
-		fresh()
+# decorate.switch = true	
+# decorate.onClick (event, layer) ->
+# 	if @switch == true
+# 		$fab.visible = true
+# 		@children[0].text = "保存"
+# 		$sheet.stateSwitch("stateB","stateA")
+# 		overlay.stateSwitch("stateB","stateA")
+# 		Edited(info)
+# 		Edited($tab)
+# 		avatar.y = -10	
+# 		$tab.children[0].y = 50
+# 		$tab.children[1].y = 44
+# 		@switch = false
+# 		info.children[2].minY = 16
+# 		fresh()
+# 	
+# 	else
+# 		Saved(info)
+# 		Saved($tab)	
+# 		$tab.children[0].y = 10
+# 		$tab.children[1].y = 0
+# 		$fab.visible = false
+# 		@children[0].text = "装修"
+# 		@switch = true
+# 		$sheet.stateSwitch("stateB","stateA")
+# 		overlay.stateSwitch("stateB","stateA")
+# 		avatar.visible = true
+# 		backtop.visible = true	
+# 		backtop.y = Align.center(4)
+# 		fresh()
 
 			
 $fab.onClick (event, layer) ->

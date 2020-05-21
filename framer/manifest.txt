@@ -1,7 +1,5 @@
 app.coffee
 index.html
-images/design/XMfmBwwRWqkp2SMJcVszGTlaH9LXTOPd8nOeLYFwiWIBp9HCm6Lws7cnxhAk0dOmwCdhqzxVUT0RymKHw2Q
-images/design/HorHI4BcNY8jwyrlnAM1l87u7iOC8bbU4tkRHsOCOPuuq4NtPcPzT5j6um96qRRGwCQfxRPWbiF4VoNJg
 images/design/sXvcwNBFrXEWhR68oDZQb9Ek9lKZiGGAD9JtFzHfcFxskXvEORRVVjty7S3Maw08yj9dmgjbLQeXe0GyILBQ
 framer/manifest.txt
 framer/images/cursor.png

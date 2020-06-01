@@ -26,6 +26,27 @@ quick = "spring(400,20,10)"
 loose = "spring(240,18,28)"
 normal = Bezier(0.645, 0.045, 0.355, 1)
 
+loading.states.stateA = 
+	rotation: 1480
+	options: 
+		curve:Bezier.linear
+		time:3
+
+skeleton.states.stateA =
+	opacity: 0
+	options: 
+		delay: 2.5
+		time:0.3
+		curve: pop
+
+loadinganimate = new Animation loading,
+	loading.states.stateA
+	
+skeletonHidden = new Animation skeleton,
+	skeleton.states.stateA
+
+loadinganimate.start()	
+skeletonHidden.start()
 
 scroll =  ScrollComponent.wrap(scrollcontent)
 scroll.scrollHorizontal = false
@@ -48,9 +69,9 @@ $tab = tab.copy()
 $tab.parent = scrollcontent
 $tab.x = Align.center()
 $tab.y = module.y + module.height+20
-backtop.parent = $tab
-backtop.x = Align.right(-14)
-backtop.y = Align.center(4)
+# backtop.parent = $tab
+backtop.x = Align.right(-16)
+backtop.y = Align.bottom(-140)
 backtop.opacity = 0
 icon_group.x = Align.right(-16)
 
@@ -102,16 +123,13 @@ scrolltoY = (y) ->
 # 	avatar.y = Utils.modulate(y,[171,180],[-10,-24],true)
 	# 社区标题
 	info_title.opacity = Utils.modulate(y,[230,236],[0,1],true)
-	info.opacity = Utils.modulate(y,[516,564],[1,0],true)
+# 	info.opacity = Utils.modulate(y,[516,564],[1,0],true)
 	backtop.opacity = Utils.modulate(y,[560,570],[0,1],true)
 	navTitle.opacity = Utils.modulate(y,[560,570],[0,1],true)
-	icon_group.x = Utils.modulate(y,[560,570],[240,208],true)
+# 	icon_group.x = Utils.modulate(y,[560,570],[240,200],true)
 	
 	if y > 560
-		$tab.y = y 		
-
-# 	else
-# 		info.y = 171	
+		$tab.y = y
 
 	# float btn 推动交互
 # 	if y> 0 && scroll.direction == "down"
@@ -168,11 +186,13 @@ $fab.placeBehind($sheet)
 # 		overlay.stateSwitch("stateB","stateA")
 # 		Edited(info)
 # 		Edited($tab)
-# 		avatar.y = -10	
+# 		avatar.y = -28	
 # 		$tab.children[0].y = 50
 # 		$tab.children[1].y = 44
 # 		@switch = false
 # 		info.children[2].minY = 16
+# 		scroll
+# 		scrollcontent.height = scrollcontent.contentFrame().height
 # 		fresh()
 # 	
 # 	else
@@ -199,6 +219,8 @@ $fab.onClick (event, layer) ->
 	$tab.children[1].y = 10
 	@visible = false
 	decorate.children[0].text = "装修"
+	info.y = 185
+	info.height = 66
 	fresh()
 	avatar.visible = true
 	backtop.visible = true

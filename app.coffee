@@ -25,6 +25,7 @@ slow = "spring(100,50,0)"
 quick = "spring(400,20,10)"
 loose = "spring(240,18,28)"
 normal = Bezier(0.645, 0.045, 0.355, 1)
+skeleton.parent = main
 
 loading.states.stateA = 
 	rotation: 1480
@@ -55,12 +56,14 @@ scroll.scrollHorizontal = false
 avatar.originX = 0
 avatar.originY = 1.2
 # 初始化组件
+info.y = 175
 # $sheet = actionSheet.copy()
 $sheet.parent = main
 $sheet.y= Align.bottom(280)
 $sheet.x= Align.center()
 
-
+skeleton.placeBefore($sheet)
+skeleton.x = Align.center()
 module.parent = scrollcontent
 module.x = Align.center()
 module.y = 244
@@ -103,27 +106,28 @@ fab.states =
 			curve:quick
 			time: 0.5	
 	
-
+# print tab.y
 scroll.on Events.Move, ->
 	scrolltoY(scroll.scrollY)
 scrolltoY = (y) ->	
 # 	print y
-# 	print info.height
+# 	print info.y
 	# 简介吸顶交互
-	if y > 171
-		info.parent = topbar
-		info.y = topbar.height-1
+	if y > 175 and y < tab.y+180
+		info.parent = main
+		info.placeBehind(topbar)
+		info.y = 64
 		info.height = 48
-	else
+	else 
 		info.parent = banner
-		info.y = 185	
-# 	info_bg.y= Utils.modulate(y,[171,192],[18,0],true)
+		info.y = 175
+
 	# 社区头像
 	avatar.scale = Utils.modulate(y,[158,180],[1,0.5],true)
 # 	avatar.y = Utils.modulate(y,[171,180],[-10,-24],true)
 	# 社区标题
 	info_title.opacity = Utils.modulate(y,[230,236],[0,1],true)
-# 	info.opacity = Utils.modulate(y,[516,564],[1,0],true)
+# 	info.y = Utils.modulate(y,[516,564],[175,20],true)
 	backtop.opacity = Utils.modulate(y,[560,570],[0,1],true)
 	navTitle.opacity = Utils.modulate(y,[560,570],[0,1],true)
 # 	icon_group.x = Utils.modulate(y,[560,570],[240,200],true)
@@ -137,7 +141,7 @@ scrolltoY = (y) ->
 # 	if y> 0 && scroll.direction == "up"	
 # 		fab.animate "stateB"
 Edited = (a) ->
-	a.height+=40
+	a.height += 40
 # 	a.children[0].opacity = 0.2
 	a.shadowY = 8
 	a.shadowColor = "#F5F5F5"
@@ -211,20 +215,20 @@ $fab.placeBehind($sheet)
 # 		fresh()
 
 			
-$fab.onClick (event, layer) ->
-	Saved(info)
-	Saved($tab)	
-	decorate.switch = true
-	$tab.children[0].y = 14
-	$tab.children[1].y = 10
-	@visible = false
-	decorate.children[0].text = "装修"
-	info.y = 185
-	info.height = 66
-	fresh()
-	avatar.visible = true
-	backtop.visible = true
-	backtop.y = Align.center(4)	
+# $fab.onClick (event, layer) ->
+# 	Saved(info)
+# 	Saved($tab)	
+# 	decorate.switch = true
+# 	$tab.children[0].y = 14
+# 	$tab.children[1].y = 10
+# 	@visible = false
+# 	decorate.children[0].text = "装修"
+# 	info.y = 185
+# 	info.height = 66
+# 	fresh()
+# 	avatar.visible = true
+# 	backtop.visible = true
+# 	backtop.y = Align.center(4)	
 
 $tab.states = 
 	stateA:

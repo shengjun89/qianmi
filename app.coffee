@@ -31,12 +31,13 @@ loading.states.stateA =
 	rotation: 1480
 	options: 
 		curve:Bezier.linear
-		time:3
+		delay: 2.5
+		time: 3
 
 skeleton.states.stateA =
 	opacity: 0
 	options: 
-		delay: 2.5
+		delay: 5
 		time:0.3
 		curve: pop
 
@@ -77,7 +78,25 @@ backtop.x = Align.right(-16)
 backtop.y = Align.bottom(-140)
 backtop.opacity = 0
 icon_group.x = Align.right(-16)
+launch.parent = main
+launch.x = Align.center
+lauchbg = new Layer
+	parent: launch
+	x: Align.center
+	y: Align.center(-40)
+	opacity: 0.4
+	image:"images/design/ka3syowv.gif"
 
+launchTxt.placeBefore(lauchbg)
+launch.states.stateA =
+	opacity: 0
+	options: 
+		delay: 2.5
+		time:0.3
+		curve: pop
+launchHidden = new Animation launch,
+	launch.states.stateA
+launchHidden.start()
 
 module.placeBehind(banner)
 # $backtop = backtop.copy()
@@ -179,6 +198,7 @@ $fab.shadowColor = "rgba(9, 185, 141, 0.2)"
 
 $fab.visible = false
 $fab.placeBehind($sheet)
+
 
 # 装修&保存
 # decorate.switch = true	

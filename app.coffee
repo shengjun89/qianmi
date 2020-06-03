@@ -85,7 +85,8 @@ lauchbg = new Layer
 	x: Align.center
 	y: Align.center(-40)
 	opacity: 0.4
-	image:"images/design/ka3syowv.gif"
+	backgroundColor: "#FFF"
+# 	image:"images/design/ka3syowv.gif"
 
 launchTxt.placeBefore(lauchbg)
 launch.states.stateA =

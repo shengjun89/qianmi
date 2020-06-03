@@ -12607,11 +12607,163 @@
             "widthFactor" : null
           },
           {
-            "__class" : "RectangleShapeNode",
-            "aspectRatioLocked" : true,
+            "__class" : "FrameNode",
+            "aspectRatioLocked" : false,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
+            "blur" : 12,
+            "blurEnabled" : 0,
+            "blurType" : "layer",
+            "borderBottom" : 1,
+            "borderColor" : "#222",
+            "borderEnabled" : 0,
+            "borderLeft" : 1,
+            "borderPerSide" : false,
+            "borderRight" : 1,
+            "borderStyle" : "solid",
+            "borderTop" : 1,
+            "borderWidth" : 1,
+            "bottom" : null,
             "boxShadows" : [
 
             ],
+            "brightness" : 100,
+            "brightnessEnabled" : 0,
+            "centerAnchorX" : 0.5013333333333333,
+            "centerAnchorY" : 0.50072463768115938,
+            "children" : [
+              {
+                "__class" : "PathNode",
+                "aspectRatioLocked" : false,
+                "boxShadows" : [
+
+                ],
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "#CCC",
+                "fillEnabled" : false,
+                "fillGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "end" : "rgba(0,0,0,0)",
+                  "start" : "black"
+                },
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 26,
+                "id" : "ZLbB2oiCP",
+                "lineCap" : "round",
+                "lineJoin" : "miter",
+                "locked" : false,
+                "name" : "loading",
+                "opacity" : 1,
+                "parentid" : "FdN8m5dGQ",
+                "pathClosed" : true,
+                "pathSegments" : [
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : -7.1797017478003227,
+                    "handleInY" : 0,
+                    "handleMirroring" : "symmetric",
+                    "handleOutX" : 7.1797017478003227,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 13,
+                    "y" : 0
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : -7.1797017478003227,
+                    "handleMirroring" : "asymmetric",
+                    "handleOutX" : 0,
+                    "handleOutY" : 3.5898508739001613,
+                    "radius" : 0,
+                    "x" : 26,
+                    "y" : 13
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 2.3525372815249597,
+                    "handleInY" : -2.3525372815249597,
+                    "handleMirroring" : "asymmetric",
+                    "handleOutX" : -1.1762686407624798,
+                    "handleOutY" : 1.1762686407624798,
+                    "radius" : 0,
+                    "x" : 22.192388155425135,
+                    "y" : 22.192388155425135
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 1.5552985194281383,
+                    "handleInY" : -0.65783580095309802,
+                    "handleMirroring" : "asymmetric",
+                    "handleOutX" : -0.77764925971407095,
+                    "handleOutY" : 0.32891790047655078,
+                    "radius" : 0,
+                    "x" : 18.06018667485327,
+                    "y" : 24.978395558284433
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0.84626867416603879,
+                    "handleInY" : -0.17317163530975677,
+                    "handleMirroring" : "straight",
+                    "handleOutX" : -0.84626867416603879,
+                    "handleOutY" : 0.17317163530975677,
+                    "radius" : 0,
+                    "x" : 15.61995343149735,
+                    "y" : 25.735886204499593
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0.89746271847504033,
+                    "handleInY" : 0,
+                    "handleMirroring" : "asymmetric",
+                    "handleOutX" : -7.1797017478003227,
+                    "handleOutY" : 0,
+                    "radius" : 0,
+                    "x" : 13,
+                    "y" : 26
+                  },
+                  {
+                    "__class" : "PathSegment",
+                    "handleInX" : 0,
+                    "handleInY" : 7.1797017478003227,
+                    "handleMirroring" : "symmetric",
+                    "handleOutX" : 0,
+                    "handleOutY" : -7.1797017478003227,
+                    "radius" : 0,
+                    "x" : 0,
+                    "y" : 13
+                  }
+                ],
+                "rotation" : 0,
+                "strokeAlignment" : "center",
+                "strokeColor" : "hsl(0, 0%, 100%)",
+                "strokeDashArray" : "76",
+                "strokeDashOffset" : 0,
+                "strokeEnabled" : 1,
+                "strokeMiterLimit" : 4,
+                "strokeWidth" : 2.5,
+                "targetName" : "loading",
+                "visible" : true,
+                "width" : 26,
+                "x" : 31,
+                "y" : 30
+              }
+            ],
+            "clip" : false,
+            "constraintsLocked" : false,
+            "contrast" : 100,
+            "contrastEnabled" : 0,
+            "deviceType" : null,
+            "exportIncludesBackground" : true,
             "exportOptions" : [
 
             ],
@@ -12629,158 +12781,40 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 55,
-            "id" : "yJDoJuD_x",
-            "lineCap" : "butt",
-            "lineJoin" : "miter",
+            "grayscale" : 0,
+            "grayScaleEnabled" : 0,
+            "height" : 85,
+            "heightFactor" : null,
+            "hueRotate" : 0,
+            "hueRotateEnabled" : 0,
+            "id" : "FdN8m5dGQ",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "invert" : 0,
+            "invertEnabled" : 0,
+            "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "parentid" : "Y98HKbS94",
-            "radius" : 6,
-            "radiusBottomLeft" : 6,
-            "radiusBottomRight" : 6,
+            "radius" : 12,
+            "radiusBottomLeft" : 12,
+            "radiusBottomRight" : 12,
+            "radiusIsRelative" : false,
             "radiusPerCorner" : false,
-            "radiusTopLeft" : 6,
-            "radiusTopRight" : 6,
+            "radiusTopLeft" : 12,
+            "radiusTopRight" : 12,
+            "right" : null,
             "rotation" : 0,
-            "strokeAlignment" : "center",
-            "strokeColor" : "#0AF",
-            "strokeDashArray" : "0",
-            "strokeDashOffset" : 0,
-            "strokeEnabled" : 0,
-            "strokeMiterLimit" : 4,
-            "strokeWidth" : 1,
+            "saturate" : 100,
+            "saturateEnabled" : 0,
+            "sepia" : 0,
+            "sepiaEnabled" : 0,
             "targetName" : null,
+            "top" : null,
             "visible" : true,
-            "width" : 55,
-            "x" : 160,
-            "y" : 318
-          },
-          {
-            "__class" : "PathNode",
-            "aspectRatioLocked" : false,
-            "boxShadows" : [
-
-            ],
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "#CCC",
-            "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 26,
-            "id" : "ZLbB2oiCP",
-            "lineCap" : "round",
-            "lineJoin" : "miter",
-            "locked" : false,
-            "name" : "loading",
-            "opacity" : 1,
-            "parentid" : "Y98HKbS94",
-            "pathClosed" : true,
-            "pathSegments" : [
-              {
-                "__class" : "PathSegment",
-                "handleInX" : -7.1797017478003227,
-                "handleInY" : 0,
-                "handleMirroring" : "symmetric",
-                "handleOutX" : 7.1797017478003227,
-                "handleOutY" : 0,
-                "radius" : 0,
-                "x" : 13,
-                "y" : 0
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 0,
-                "handleInY" : -7.1797017478003227,
-                "handleMirroring" : "asymmetric",
-                "handleOutX" : 0,
-                "handleOutY" : 3.5898508739001613,
-                "radius" : 0,
-                "x" : 26,
-                "y" : 13
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 2.3525372815249597,
-                "handleInY" : -2.3525372815249597,
-                "handleMirroring" : "asymmetric",
-                "handleOutX" : -1.1762686407624798,
-                "handleOutY" : 1.1762686407624798,
-                "radius" : 0,
-                "x" : 22.192388155425135,
-                "y" : 22.192388155425135
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 1.5552985194281383,
-                "handleInY" : -0.65783580095309802,
-                "handleMirroring" : "asymmetric",
-                "handleOutX" : -0.77764925971407095,
-                "handleOutY" : 0.32891790047655078,
-                "radius" : 0,
-                "x" : 18.06018667485327,
-                "y" : 24.978395558284433
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 0.84626867416603879,
-                "handleInY" : -0.17317163530975677,
-                "handleMirroring" : "straight",
-                "handleOutX" : -0.84626867416603879,
-                "handleOutY" : 0.17317163530975677,
-                "radius" : 0,
-                "x" : 15.61995343149735,
-                "y" : 25.735886204499593
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 0.89746271847504033,
-                "handleInY" : 0,
-                "handleMirroring" : "asymmetric",
-                "handleOutX" : -7.1797017478003227,
-                "handleOutY" : 0,
-                "radius" : 0,
-                "x" : 13,
-                "y" : 26
-              },
-              {
-                "__class" : "PathSegment",
-                "handleInX" : 0,
-                "handleInY" : 7.1797017478003227,
-                "handleMirroring" : "symmetric",
-                "handleOutX" : 0,
-                "handleOutY" : -7.1797017478003227,
-                "radius" : 0,
-                "x" : 0,
-                "y" : 13
-              }
-            ],
-            "rotation" : 0,
-            "strokeAlignment" : "center",
-            "strokeColor" : "hsl(0, 0%, 100%)",
-            "strokeDashArray" : "76",
-            "strokeDashOffset" : 0,
-            "strokeEnabled" : 1,
-            "strokeMiterLimit" : 4,
-            "strokeWidth" : 2.5,
-            "targetName" : "loading",
-            "visible" : true,
-            "width" : 26,
-            "x" : 175,
-            "y" : 332
+            "width" : 88,
+            "widthFactor" : null
           }
         ],
         "clip" : true,
@@ -12869,6 +12903,317 @@
         "children" : [
           {
             "__class" : "FrameNode",
+            "aspectRatioLocked" : false,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
+            "blur" : 12,
+            "blurEnabled" : 0,
+            "blurType" : "layer",
+            "borderBottom" : 1,
+            "borderColor" : "#222",
+            "borderEnabled" : 0,
+            "borderLeft" : 1,
+            "borderPerSide" : false,
+            "borderRight" : 1,
+            "borderStyle" : "solid",
+            "borderTop" : 1,
+            "borderWidth" : 1,
+            "bottom" : null,
+            "boxShadows" : [
+
+            ],
+            "brightness" : 100,
+            "brightnessEnabled" : 0,
+            "centerAnchorX" : 0.5013333333333333,
+            "centerAnchorY" : 0.50123152709359609,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : true,
+                "blendingEnabled" : 0,
+                "blendingMode" : "normal",
+                "blur" : 12,
+                "blurEnabled" : 0,
+                "blurType" : "layer",
+                "bottom" : null,
+                "brightness" : 100,
+                "brightnessEnabled" : 0,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.30645161290322581,
+                "constraintsLocked" : false,
+                "contrast" : 100,
+                "contrastEnabled" : 0,
+                "editable" : false,
+                "exportOptions" : [
+
+                ],
+                "grayscale" : 0,
+                "grayScaleEnabled" : 0,
+                "height" : 40,
+                "heightFactor" : null,
+                "hueRotate" : 0,
+                "hueRotateEnabled" : 0,
+                "id" : "rmBFw2wOJ",
+                "invert" : 0,
+                "invertEnabled" : 0,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "parentid" : "Bbot2Nkny",
+                "right" : null,
+                "rotation" : 0,
+                "saturate" : 100,
+                "saturateEnabled" : 0,
+                "sepia" : 0,
+                "sepiaEnabled" : 0,
+                "shadows" : [
+
+                ],
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LINEHEIGHT:1.2",
+                          "LETTERSPACING:9.7",
+                          "COLOR:hsl(198, 100%, 56%)",
+                          "FONT:HelveticaNeue-BoldItalic",
+                          "SIZE:34"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:9.7"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "COLOR:hsl(198, 100%, 56%)"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue-BoldItalic"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "SIZE:34"
+                        }
+                      ],
+                      "key" : "8n5be",
+                      "text" : "WELCOME",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "cached" : {
+                    "html" : "<span data-offset-key=\"8n5be-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;HelveticaNeue-BoldItalic&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:hsl(198, 100%, 56%);font-size:34px;letter-spacing:9.7px;line-height:1.2\"><span data-text=\"true\">WELCOME<\/span><\/span>",
+                    "os" : "10_15",
+                    "size" : {
+                      "height" : 40,
+                      "width" : 249
+                    },
+                    "width" : 0
+                  },
+                  "entityMap" : {
+
+                  }
+                },
+                "targetName" : null,
+                "top" : 0,
+                "visible" : true,
+                "width" : 249,
+                "widthFactor" : null,
+                "x" : 72,
+                "y" : 301
+              },
+              {
+                "__class" : "TextNode",
+                "autoSize" : true,
+                "blendingEnabled" : 0,
+                "blendingMode" : "normal",
+                "blur" : 12,
+                "blurEnabled" : 0,
+                "blurType" : "layer",
+                "bottom" : 0,
+                "brightness" : 100,
+                "brightnessEnabled" : 0,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.90322580645161288,
+                "constraintsLocked" : false,
+                "contrast" : 100,
+                "contrastEnabled" : 0,
+                "editable" : false,
+                "exportOptions" : [
+
+                ],
+                "grayscale" : 0,
+                "grayScaleEnabled" : 0,
+                "height" : 13,
+                "heightFactor" : null,
+                "hueRotate" : 0,
+                "hueRotateEnabled" : 0,
+                "id" : "IL02PGrAN",
+                "invert" : 0,
+                "invertEnabled" : 0,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "parentid" : "Bbot2Nkny",
+                "right" : null,
+                "rotation" : 0,
+                "saturate" : 100,
+                "saturateEnabled" : 0,
+                "sepia" : 0,
+                "sepiaEnabled" : 0,
+                "shadows" : [
+
+                ],
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "FONT:HelveticaNeue",
+                          "LINEHEIGHT:1.2",
+                          "COLOR:#333333",
+                          "LETTERSPACING:8.3",
+                          "SIZE:11"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "COLOR:#333333"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:8.3"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "SIZE:11"
+                        }
+                      ],
+                      "key" : "fbe2n",
+                      "text" : "很高兴遇见你·精彩马上开启",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "cached" : {
+                    "html" : "<span data-offset-key=\"fbe2n-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:#333333;font-size:11px;letter-spacing:8.3px;line-height:1.2\"><span data-text=\"true\">很高兴遇见你·精彩马上开启<\/span><\/span>",
+                    "os" : "10_15",
+                    "size" : {
+                      "height" : 13,
+                      "width" : 244
+                    },
+                    "width" : 0
+                  },
+                  "entityMap" : {
+
+                  }
+                },
+                "targetName" : null,
+                "top" : null,
+                "visible" : true,
+                "width" : 244,
+                "widthFactor" : null,
+                "x" : 91,
+                "y" : 406
+              }
+            ],
+            "clip" : true,
+            "constraintsLocked" : false,
+            "contrast" : 100,
+            "contrastEnabled" : 0,
+            "deviceType" : null,
+            "exportIncludesBackground" : true,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255, 255, 255, 0)",
+            "fillEnabled" : true,
+            "fillGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "grayscale" : 0,
+            "grayScaleEnabled" : 0,
+            "height" : 62,
+            "heightFactor" : null,
+            "hueRotate" : 0,
+            "hueRotateEnabled" : 0,
+            "id" : "Bbot2Nkny",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "invert" : 0,
+            "invertEnabled" : 0,
+            "left" : 65,
+            "locked" : false,
+            "name" : "launchTxt",
+            "opacity" : 0,
+            "parentid" : "Ru0w5RQ59",
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 64,
+            "rotation" : 0,
+            "saturate" : 100,
+            "saturateEnabled" : 0,
+            "sepia" : 0,
+            "sepiaEnabled" : 0,
+            "targetName" : "launchTxt",
+            "top" : null,
+            "visible" : true,
+            "width" : 246,
+            "widthFactor" : null
+          },
+          {
+            "__class" : "FrameNode",
             "aspectRatioLocked" : true,
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
@@ -12888,10 +13233,10 @@
             "boxShadows" : [
 
             ],
-            "brightness" : 0,
-            "brightnessEnabled" : -1,
-            "centerAnchorX" : 0.5013333333333333,
-            "centerAnchorY" : 0.45320197044334976,
+            "brightness" : 100,
+            "brightnessEnabled" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.47598522167487683,
             "children" : [
 
             ],
@@ -12913,27 +13258,27 @@
               "end" : "rgba(0,0,0,0)",
               "start" : "black"
             },
-            "fillImage" : "6kEIuIk5zWXFU3i96c81Hgz0acDR3y4GSOoGMFuRH7Z1FX6tChxEzX6egaWq80yHxcPdlHZQMlaspESYDgzX6A",
-            "fillImagePixelHeight" : 640,
-            "fillImagePixelWidth" : 640,
+            "fillImage" : "DetZ5zi8jj2OXMyz4MJqnstAIDTJE0AqRQ1OXXVmgcMx9eKTmOMWndo3gYvvAsflNd4vcSGUE9SZXVGKpJ1g",
+            "fillImagePixelHeight" : 257,
+            "fillImagePixelWidth" : 671,
             "fillImageResize" : "fill",
             "fillType" : "image",
             "grayscale" : 0,
             "grayScaleEnabled" : 0,
-            "height" : 320,
+            "height" : 89,
             "heightFactor" : null,
             "hueRotate" : 0,
-            "hueRotateEnabled" : 1,
-            "id" : "auAhAJmt3",
-            "intrinsicHeight" : 320,
-            "intrinsicWidth" : 320,
+            "hueRotateEnabled" : 0,
+            "id" : "dxzTYSRUm",
+            "intrinsicHeight" : 128.5,
+            "intrinsicWidth" : 335.5,
             "invert" : 0,
             "invertEnabled" : 0,
-            "left" : 28,
+            "left" : 71,
             "locked" : false,
             "name" : null,
-            "opacity" : 0.19,
-            "originalFilename" : "ka3syowv.gif",
+            "opacity" : 1,
+            "originalFilename" : "IMG_C222EB52F1B5-1.jpg",
             "parentid" : "Ru0w5RQ59",
             "radius" : 0,
             "radiusBottomLeft" : 0,
@@ -12942,16 +13287,16 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 27,
+            "right" : 71,
             "rotation" : 0,
             "saturate" : 100,
             "saturateEnabled" : 0,
             "sepia" : 0,
-            "sepiaEnabled" : 1,
+            "sepiaEnabled" : 0,
             "targetName" : null,
-            "top" : 208,
+            "top" : 342,
             "visible" : true,
-            "width" : 320,
+            "width" : 233,
             "widthFactor" : null
           }
         ],
@@ -12964,7 +13309,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "rgb(255, 255, 255)",
+        "fillColor" : "rgba(248, 249, 254, 1.00)",
         "fillEnabled" : true,
         "fillGradient" : {
           "__class" : "LinearGradient",
@@ -13011,6 +13356,93 @@
         "top" : 0,
         "visible" : true,
         "width" : 375,
+        "widthFactor" : null
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatioLocked" : true,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "blur" : 12,
+        "blurEnabled" : 0,
+        "blurType" : "layer",
+        "borderBottom" : 1,
+        "borderColor" : "#222",
+        "borderEnabled" : 0,
+        "borderLeft" : 1,
+        "borderPerSide" : false,
+        "borderRight" : 1,
+        "borderStyle" : "solid",
+        "borderTop" : 1,
+        "borderWidth" : 1,
+        "bottom" : null,
+        "boxShadows" : [
+
+        ],
+        "brightness" : 115,
+        "brightnessEnabled" : 1,
+        "centerAnchorX" : 1.2893333333333334,
+        "centerAnchorY" : 0.24710144927536232,
+        "children" : [
+
+        ],
+        "clip" : false,
+        "constraintsLocked" : false,
+        "contrast" : 100,
+        "contrastEnabled" : 0,
+        "deviceType" : null,
+        "exportIncludesBackground" : true,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : true,
+        "fillGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillImage" : "DsQYSPV8b1kgMKNuk3Ndgw91zklk1mqeMiyf1IZjoMJEuFrsMLc6hMhuwyPeL54s2tYxyl8zDZGbiy2TCDgw",
+        "fillImagePixelHeight" : 640,
+        "fillImagePixelWidth" : 640,
+        "fillImageResize" : "fill",
+        "fillType" : "image",
+        "grayscale" : 0,
+        "grayScaleEnabled" : 0,
+        "height" : 233,
+        "heightFactor" : null,
+        "hueRotate" : 0,
+        "hueRotateEnabled" : 1,
+        "id" : "DXsJomqAn",
+        "intrinsicHeight" : 320,
+        "intrinsicWidth" : 320,
+        "invert" : 0,
+        "invertEnabled" : 0,
+        "left" : 1340,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalFilename" : "kaje6d76.gif",
+        "parentid" : "JAeOeBpsU",
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "saturate" : 112,
+        "saturateEnabled" : -1,
+        "sepia" : 0,
+        "sepiaEnabled" : 0,
+        "targetName" : null,
+        "top" : 109,
+        "visible" : true,
+        "width" : 233,
         "widthFactor" : null
       }
     ],

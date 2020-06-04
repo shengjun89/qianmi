@@ -76,6 +76,8 @@ $tab.y = module.y + module.height+20
 # backtop.parent = $tab
 backtop.x = Align.right(-16)
 backtop.y = Align.bottom(-140)
+backtop.parent = main
+backtop.placeBehind($sheet)
 backtop.opacity = 0
 icon_group.x = Align.right(-16)
 launch.parent = main

@@ -9782,7 +9782,7 @@
         "aspectRatioLocked" : false,
         "blendingEnabled" : 0,
         "blendingMode" : "normal",
-        "blur" : 12,
+        "blur" : 25,
         "blurEnabled" : 1,
         "blurType" : "background",
         "borderBottom" : 1,
@@ -10306,7 +10306,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "rgba(255, 255, 255, 0.8)",
+        "fillColor" : "rgba(255, 255, 255, 0.6)",
         "fillEnabled" : true,
         "fillGradient" : {
           "__class" : "LinearGradient",

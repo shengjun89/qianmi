@@ -163,18 +163,18 @@ scrolltoY = (y) ->
 		Text_1.animate
 			scale: 1.4
 			options: 
-				curve: quick
-				time: 0.15
+# 				curve: dramatic
+				time: 0.1
 		fabTxt.animate
 			opacity: 0
 			options: 
-# 				curve: quick
-				time: 0.15
+# 				curve: dramatic
+				time: 0.1
 		fab.animate
 			scale: 0.75
 			options: 
-				curve: quick
-				time: 0.15
+# 				curve: dramatic
+				time: 0.1
 
 	# float btn 推动交互
 # 	if y> -10 && scroll.direction == "down"
@@ -192,17 +192,17 @@ scrolltoY = (y) ->
 			scale: 1
 			options: 
 				curve: quick
-				time: 0.15
+				time: 0.1
 		fabTxt.animate
 			opacity: 1
 			options: 
-# 				curve: quick
-				time: 0.15
+				curve: quick
+				time: 0.1
 		fab.animate
 			scale: 1
 			options: 
 				curve: quick
-				time: 0.15					
+				time: 0.1				
 # 	if y> 0 && scroll.direction == "up"	
 # 		fab.animate "stateB"
 Edited = (a) ->

@@ -60,7 +60,7 @@ avatar.originY = 1.2
 info.y = 175
 # $sheet = actionSheet.copy()
 $sheet.parent = main
-$sheet.y= Align.bottom(280)
+$sheet.y= Align.bottom(308)
 $sheet.x= Align.center()
 
 skeleton.placeBefore($sheet)
@@ -74,12 +74,16 @@ $tab.parent = scrollcontent
 $tab.x = Align.center()
 $tab.y = module.y + module.height+20
 # backtop.parent = $tab
-backtop.x = Align.right(-16)
-backtop.y = Align.bottom(-140)
+backtop.x = Align.right(-13)
+backtop.y = Align.bottom(-112)
 backtop.parent = main
 backtop.placeBehind($sheet)
 backtop.opacity = 0
+# backtop_1.color = "#000"
 icon_group.x = Align.right(-16)
+
+Text_1.originX = 0.5
+Text_1.originY = 0
 launch.parent = main
 launch.x = Align.center
 lauchbg = new Layer
@@ -112,7 +116,7 @@ for i in [0...7]
 	$list.x = Align.center()
 
 # float btn
-fab.y = Align.bottom(-80)
+fab.y = Align.bottom(-64)
 fab.states = 
 	stateA:
 		backgroundColor:"#FFCC66"
@@ -156,10 +160,49 @@ scrolltoY = (y) ->
 	
 	if y > 560
 		$tab.y = y
+		Text_1.animate
+			scale: 1.4
+			options: 
+				curve: quick
+				time: 0.15
+		fabTxt.animate
+			opacity: 0
+			options: 
+# 				curve: quick
+				time: 0.15
+		fab.animate
+			scale: 0.75
+			options: 
+				curve: quick
+				time: 0.15
 
 	# float btn 推动交互
-# 	if y> 0 && scroll.direction == "down"
-# 		fab.animate "stateA"
+# 	if y> -10 && scroll.direction == "down"
+# 		fab.animate
+# 			opacity: 1
+# 			options: 
+# 				curve: quick
+# 	if y> -10 && scroll.direction == "up"	
+# 		fab.animate
+# 			opacity: 0
+# 			options: 
+# 				curve: quick				
+	else
+		Text_1.animate
+			scale: 1
+			options: 
+				curve: quick
+				time: 0.15
+		fabTxt.animate
+			opacity: 1
+			options: 
+# 				curve: quick
+				time: 0.15
+		fab.animate
+			scale: 1
+			options: 
+				curve: quick
+				time: 0.15					
 # 	if y> 0 && scroll.direction == "up"	
 # 		fab.animate "stateB"
 Edited = (a) ->
@@ -183,7 +226,7 @@ Saved = (a) ->
 	a.children[a.children.length-1].visible = false
 
 scroll.contentInset = 
-	bottom: 80
+	bottom: 140
 	
 fresh=()->
 	scroll.scrollToPoint(y:20)
@@ -191,17 +234,23 @@ fresh=()->
 # 回顶部
 backtop.onClick (event, layer) -> 
 	fresh()
+bottom.onClick (event, layer) -> 
+	fresh()	
 
 fab.ignoreEvents = true
+fab.originX = 1
+fab.originY = 1
 $fab = fab.copy()
 $fab.parent = main
+
 $fab.children[1].text = "保存"
 $fab.backgroundColor = "#63D9A0"
 $fab.shadowColor = "rgba(9, 185, 141, 0.2)"
 
 $fab.visible = false
 $fab.placeBehind($sheet)
-
+$fab.states.stateA = 
+	opacity:0
 
 # 装修&保存
 # decorate.switch = true	
@@ -296,7 +345,7 @@ $sheet.states.stateA =
 		curve: iOSActionSheet
 		time: 0.1
 $sheet.states.stateB =
-	y: Align.bottom(280)
+	y: Align.bottom(308)
 	options: 
 		curve: iOSActionSheet
 		time: 0.1			

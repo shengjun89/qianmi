@@ -26,6 +26,7 @@ framer/framer.generated.js
 framer/coffee-script.js
 framer/framer.init.js
 framer/framer.js
+归档.zip
 imported/taro迁移一期 (Page 1)@1x/layers.json.js
 imported/taro迁移一期 (Page 1)@1x/images/348.png
 imported/taro迁移一期 (Page 1)@1x/images/1804.png

@@ -74,8 +74,8 @@ $tab.parent = scrollcontent
 $tab.x = Align.center()
 $tab.y = module.y + module.height+20
 # backtop.parent = $tab
-backtop.x = Align.right(-13)
-backtop.y = Align.bottom(-112)
+backtop.x = Align.right(-20)
+backtop.y = Align.bottom(-124)
 backtop.parent = main
 backtop.placeBehind($sheet)
 backtop.opacity = 0
@@ -226,7 +226,7 @@ Saved = (a) ->
 	a.children[a.children.length-1].visible = false
 
 scroll.contentInset = 
-	bottom: 140
+	bottom: 148
 	
 fresh=()->
 	scroll.scrollToPoint(y:20)
@@ -238,8 +238,8 @@ bottom.onClick (event, layer) ->
 	fresh()	
 
 fab.ignoreEvents = true
-fab.originX = 1
-fab.originY = 1
+fab.originX = 0.5
+fab.originY = 0
 $fab = fab.copy()
 $fab.parent = main
 
